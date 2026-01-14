@@ -1,0 +1,166 @@
+<main class="h-full overflow-y-auto">
+  <div class="container px-6 mx-auto grid">
+    <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+
+      <!-- START - título secundario -->
+      {{ title }}
+      <!-- END - título secundario -->
+
+    </h2>
+
+    <!-- Indicadores -->
+    <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+
+      <!-- Indicador -->
+      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+        <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
+            </path>
+          </svg>
+        </div>
+        <div>
+          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+               Número total de respuestas
+          </p>
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+            <!-- START - valor del indicador 1 -->
+             {{ total_responses }}
+            <!-- END - valor del indicador 1 -->
+          </p>
+        </div>
+      </div>
+
+      <!-- Indicador -->
+      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+        <div class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M 10 5.050781 C 11.609375 5.050781 12.917969 5.425781 12.917969 5.886719 L 12.917969 5.976562 C 13.359375 5.460938 13.832031 5.214844 14.167969 5.886719 C 14.902344 6.988281 13.367188 11.339844 11.5625 10.910156 C 11.226562 11.347656 10.886719 11.636719 10.609375 11.824219 C 10.992188 11.964844 11.25 12.238281 11.25 12.550781 C 11.25 12.847656 11.019531 13.109375 10.667969 13.253906 L 11.261719 13.945312 C 12.003906 14.125 12.5 14.460938 12.5 14.84375 C 12.5 15.417969 11.378906 15.886719 10 15.886719 C 8.621094 15.886719 7.5 15.417969 7.5 14.84375 C 7.5 14.460938 7.996094 14.125 8.738281 13.945312 L 9.332031 13.253906 C 8.980469 13.109375 8.75 12.847656 8.75 12.550781 C 8.75 12.238281 9.007812 11.964844 9.390625 11.824219 C 9.113281 11.636719 8.773438 11.347656 8.4375 10.910156 C 6.632812 11.339844 5.097656 6.988281 5.832031 5.886719 C 6.167969 5.214844 6.640625 5.460938 7.082031 5.976562 L 7.082031 5.886719 C 7.082031 5.425781 8.390625 5.050781 10 5.050781 Z M 13.75 6.457031 C 13.75 5.914062 13.324219 6.402344 12.84375 7.300781 C 12.71875 8.460938 12.4375 9.351562 12.105469 10.03125 C 13.148438 9.632812 13.75 7.519531 13.75 6.457031 Z M 6.25 6.457031 C 6.25 7.519531 6.851562 9.632812 7.894531 10.03125 C 7.5625 9.351562 7.28125 8.460938 7.15625 7.300781 C 6.675781 6.402344 6.25 5.914062 6.25 6.457031 Z M 6.25 6.457031"
+              clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+            Indicador 2
+          </p>
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+
+            <!-- START - valor del indicador 2 -->
+            Valor 2
+            <!-- END - valor del indicador 2 -->
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Indicador -->
+      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+        <div class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M 10 1.667969 C 14.601562 1.667969 18.332031 5.398438 18.332031 10 C 18.332031 14.601562 14.601562 18.332031 10 18.332031 C 5.398438 18.332031 1.667969 14.601562 1.667969 10 C 1.667969 5.398438 5.398438 1.667969 10 1.667969 Z M 10 3.332031 C 6.316406 3.332031 3.332031 6.316406 3.332031 10 C 3.332031 13.683594 6.316406 16.667969 10 16.667969 C 13.683594 16.667969 16.667969 13.683594 16.667969 10 C 16.667969 6.316406 13.683594 3.332031 10 3.332031 Z M 10 5 C 10.425781 5 10.78125 5.320312 10.828125 5.734375 L 10.832031 5.832031 L 10.832031 9.65625 L 12.257812 11.078125 C 12.582031 11.402344 12.582031 11.929688 12.257812 12.257812 C 11.957031 12.554688 11.484375 12.578125 11.15625 12.324219 L 11.078125 12.257812 L 9.410156 10.589844 C 9.28125 10.460938 9.199219 10.289062 9.175781 10.109375 L 9.167969 10 L 9.167969 5.832031 C 9.167969 5.375 9.539062 5 10 5 Z M 10 5">
+            </path>
+          </svg>
+        </div>
+        <div>
+          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+            Indicador 3
+          </p>
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+
+            <!-- START - valor del indicador 3 -->
+            Valor 3
+            <!-- END - valor del indicador 3 -->
+
+          </p>
+        </div>
+      </div>
+
+      <!-- Indicador -->
+      <div class="flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+        <div class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M 18.332031 8.175781 C 18.234375 7.863281 17.964844 7.640625 17.640625 7.601562 L 12.890625 6.949219 L 10.734375 2.941406 C 10.585938 2.671875 10.304688 2.503906 10 2.503906 C 9.695312 2.503906 9.414062 2.671875 9.265625 2.941406 L 7.140625 6.949219 L 2.390625 7.601562 C 2.070312 7.644531 1.804688 7.867188 1.707031 8.175781 C 1.625 8.472656 1.714844 8.796875 1.941406 9.007812 L 5.351562 12.117188 L 4.515625 16.484375 C 4.433594 16.808594 4.550781 17.148438 4.816406 17.351562 C 5.082031 17.554688 5.441406 17.582031 5.734375 17.417969 L 10 15.316406 L 14.265625 17.417969 C 14.382812 17.472656 14.507812 17.5 14.632812 17.5 C 14.882812 17.503906 15.121094 17.394531 15.28125 17.207031 C 15.445312 17.015625 15.511719 16.761719 15.464844 16.515625 L 14.632812 12.148438 L 18.042969 9.042969 C 18.304688 8.835938 18.417969 8.496094 18.332031 8.175781 Z M 18.332031 8.175781"
+              clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+            Indicador 4
+          </p>
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
+
+            <!-- START - valor del indicador 4 -->
+            Valor 4
+            <!-- END - valor del indicador 4 -->
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid gap-6 mb-8 md:grid-cols-2">
+
+      <!-- BEGIN - Datos -->
+      <div class="row-span-1 w-full overflow-hidden rounded-lg shadow-xs mb-6">
+
+        <div class="w-full overflow-x-auto">
+          <table class="w-full whitespace-no-wrap">
+            <thead>
+              <tr
+                class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                <th class="px-4 py-3">Columna 1</th>
+                <th class="px-4 py-3">Columna 2</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+
+              <!-- START - respuestas -->
+              <tr class="text-gray-700 dark:text-gray-400">
+                <td class="px-4 py-3 text-sm">
+                  <!-- START - fila.valor1 -->
+                  fila.valor1
+                  <!-- END - fila.valor1 -->
+                </td>
+                <td class="px-4 py-3 text-sm">
+                  <!-- START - fila.valor2 -->
+                  fila.valor2
+                  <!-- END - fila.valor2 -->
+                </td>
+              </tr>
+              <!-- END - respuestas -->
+
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
+          <span class="flex items-center col-span-3">
+            <!-- START - # total de respuestas -->
+            XXX
+            <!-- END - # total de respuestas -->
+            respuestas
+          </span>
+        </div>
+      </div>
+      <!-- END - Datos -->
+
+      <!-- BEGIN - Gráficos -->
+      <div class="row-span-1 grid gap-6 mb-8 md:grid-cols-12">
+        <div class="min-w-0 p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+          <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">
+            Título del gráfico
+          </h4>
+          <canvas id="line"></canvas>
+        </div>
+      </div>
+      <!-- END - Gráficos -->
+
+    </div>
+
+  </div>
+</main>
