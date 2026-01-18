@@ -139,14 +139,13 @@ USE_TZ = True
 # --- SECCIÓN DE ESTÁTICOS CORREGIDA ---
 STATIC_URL = "/static/"
 
-# Añade esta línea para ayudar a WhiteNoise
-WHITENOISE_KEEP_ONLY_HASHED_FILES = True
+
 
 # STATIC_ROOT es donde se guardan los archivos para producción
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 # El motor de WhiteNoise para comprimir archivos
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.StaticFilesStorage'
 
 # ESTA ES LA LÍNEA QUE DEBES CORREGIR:
 # Debe apuntar a la carpeta 'static' física en tu proyecto
