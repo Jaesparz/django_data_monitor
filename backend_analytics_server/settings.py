@@ -136,12 +136,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
+# --- SECCIÓN DE ESTÁTICOS CORREGIDA ---
 STATIC_URL = "static/"
+
+# STATIC_ROOT es donde se guardan los archivos para producción
 STATIC_ROOT = BASE_DIR / 'assets'
+
+# El motor de WhiteNoise para comprimir archivos
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# ESTA ES LA LÍNEA QUE DEBES CORREGIR:
+# Debe apuntar a la carpeta 'static' física en tu proyecto
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, STATIC_URL),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 
