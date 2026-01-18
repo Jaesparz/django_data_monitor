@@ -35,12 +35,12 @@ CSRF_TRUSTED_ORIGINS = [
   "https://*.app.github.dev", # Solo si utiliza Codespaces
   "https://localhost:8000",
    "https://*.up.railway.app",
-  "http://127.0.0.1:8000"
+  "http://127.0.0.1:8000",
 ]
 
 ALLOWED_HOSTS = [
   "*",
-  '.up.railway.app'
+  '.up.railway.app',
 ]
 
 
@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-     'whitenoise.middleware.WhiteNoiseMiddleware',  # Agregar WhiteNoise al middleware (debe ir después de SecurityMiddleware)
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Agregar WhiteNoise al middleware (debe ir después de SecurityMiddleware)
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
