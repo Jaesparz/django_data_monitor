@@ -137,10 +137,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 # --- SECCIÓN DE ESTÁTICOS CORREGIDA ---
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+
+# Añade esta línea para ayudar a WhiteNoise
+WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 
 # STATIC_ROOT es donde se guardan los archivos para producción
-STATIC_ROOT = BASE_DIR / 'assets'
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 # El motor de WhiteNoise para comprimir archivos
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
