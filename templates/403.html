@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Local stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/tailwind.output.css' %}">
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <!-- Local script files -->
+    <script src="{% static 'js/init-alpine.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900">
+        <div class="flex items-center justify-center flex-1">
+            <div class="max-w-md p-6 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
+                <h1 class="text-2xl font-semibold text-gray-800 dark:text-gray-200">403 Forbidden</h1>
+                <p class="mt-4 text-gray-600 dark:text-gray-400">You do not have permission to access this page.</p>
+                <div class="mt-6 flex justify-center">
+                    <a href="{% url 'login' %}"
+                        class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                        Regresar al inicio de sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
